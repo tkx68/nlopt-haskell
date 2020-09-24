@@ -1,11 +1,14 @@
-resolver: lts-12.2
-
+resolver: lts-16.15
 packages:
 - '.'
 extra-deps: []
 flags: {}
 extra-package-dbs: []
-
+ghc-options:
+    # All packages
+    "$locals": -Wall
+    "$targets": -Werror
+    "$everything": -O2
 extra-include-dirs:
  - /usr/local/include
 extra-lib-dirs:
