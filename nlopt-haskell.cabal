@@ -23,8 +23,8 @@ source-repository head
 
 flag link-nlopt-cxx
      description: Link with @-lnlopt_cxx@ instead of @-lnlopt@
-     default: False
-     manual: True
+     default: True
+     manual: False
 
 library
   exposed-modules: Numeric.Optimization.NLOPT.Bindings
@@ -36,7 +36,6 @@ library
     extra-libraries:     nlopt_cxx
   else
     extra-libraries:     nlopt
-
 
 test-suite example
   type: exitcode-stdio-1.0
